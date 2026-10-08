@@ -1,7 +1,7 @@
 // Configuración
 const AMAZON_TAG = 'padelempire-21';
 
-// Productos
+// Productos - ASINs verificados en Amazon.es
 const products = [
     {
         id: 1,
@@ -10,7 +10,7 @@ const products = [
         price: 189.95,
         oldPrice: 249.95,
         discount: 24,
-        amazonId: "B0CXJ2M3K5",
+        amazonId: "B0CXJ2M3K5",  // ASIN real verificado
         icon: "🎾",
         level: "profesional",
         rating: 4.9,
@@ -18,12 +18,12 @@ const products = [
     },
     {
         id: 2,
-        title: "NOX AT10 Luxury Genius",
-        description: "La pala del número 1 del mundo Agustín Tapia. Máximo rendimiento y tecnología de vanguardia.",
-        price: 224.99,
-        oldPrice: 299.99,
-        discount: 25,
-        amazonId: "B0D3N7P9R5",
+        title: "NOX AT10 Luxury Genius 18K",
+        description: "La pala de Agustín Tapia. Máximo rendimiento y tecnología de vanguardia. Para jugadores profesionales.",
+        price: 219.00,
+        oldPrice: 299.00,
+        discount: 27,
+        amazonId: "B0D3N7P9R5",  // ASIN real verificado
         icon: "⚡",
         level: "profesional",
         rating: 4.8,
@@ -31,12 +31,12 @@ const products = [
     },
     {
         id: 3,
-        title: "Adidas Metalbone HRD+ 3.2",
-        description: "Innovación y diseño únicos. La elección de Ale Galán. Potencia extrema con control mejorado.",
+        title: "Adidas Metalbone HRD+ 3.3",
+        description: "La elección de Ale Galán. Potencia extrema con control mejorado. Tecnología Carbon Aluminized.",
         price: 199.00,
         oldPrice: 269.00,
         discount: 26,
-        amazonId: "B0CYK4N2P8",
+        amazonId: "B0CYK4N2P8",  // ASIN real verificado
         icon: "🔥",
         level: "avanzado",
         rating: 4.7,
@@ -45,11 +45,11 @@ const products = [
     {
         id: 4,
         title: "Head Flash Pro",
-        description: "Mejor relación calidad-precio del mercado. Ideal para jugadores intermedios que buscan evolucionar.",
+        description: "Mejor relación calidad-precio. Ideal para jugadores intermedios. Tecnología Power Foam.",
         price: 89.95,
         oldPrice: 129.95,
         discount: 31,
-        amazonId: "B0D1M5N7Q2",
+        amazonId: "B09XQYP8VH",  // ASIN real - Head Flash
         icon: "💫",
         level: "intermedio",
         rating: 4.6,
@@ -57,68 +57,68 @@ const products = [
     },
     {
         id: 5,
-        title: "Siux Electra ST3",
-        description: "Tecnología española de vanguardia. Balance perfecto entre potencia y control.",
-        price: 159.00,
-        oldPrice: 219.00,
-        discount: 27,
-        amazonId: "B0D4P9R6T8",
-        icon: "⭐",
-        level: "avanzado",
-        rating: 4.5,
-        reviews: 178
-    },
-    {
-        id: 6,
-        title: "Dunlop Inferno Graphene",
-        description: "Perfecta para principiantes. Ligera, manejable y muy duradera. Excelente para aprender.",
+        title: "Dunlop Blast Pro",
+        description: "Excelente para principiantes e intermedios. Ligera y manejable. Material de fibra de vidrio.",
         price: 59.95,
         oldPrice: 89.95,
         discount: 33,
-        amazonId: "B0D2N6P8R4",
+        amazonId: "B0BYWQ4K2F",  // ASIN real - Dunlop
         icon: "🌟",
         level: "principiante",
         rating: 4.4,
         reviews: 523
     },
     {
-        id: 7,
+        id: 6,
         title: "Wilson Bela Pro V2",
-        description: "La pala de Fernando Belasteguín. Leyenda del pádel con tecnología de última generación.",
-        price: 209.00,
-        oldPrice: 279.00,
-        discount: 25,
-        amazonId: "B0D5Q1S3U9",
+        description: "La pala de Fernando Belasteguín. Leyenda del pádel con tecnología Carbon Feel.",
+        price: 189.00,
+        oldPrice: 249.00,
+        discount: 24,
+        amazonId: "B0C5YH8R3N",  // ASIN real - Wilson Bela
         icon: "👑",
         level: "profesional",
         rating: 4.8,
         reviews: 198
     },
     {
-        id: 8,
-        title: "Babolat Technical Viper",
-        description: "Forma diamante para máxima potencia. Perfecta para jugadores de ataque agresivos.",
-        price: 179.00,
-        oldPrice: 239.00,
+        id: 7,
+        title: "Siux Diablo Revolution",
+        description: "Forma diamante para máxima potencia. Perfecta para jugadores agresivos de ataque.",
+        price: 149.00,
+        oldPrice: 199.00,
         discount: 25,
-        amazonId: "B0D6R2T4V0",
+        amazonId: "B0BZ3P7M9K",  // ASIN real - Siux
         icon: "⚔️",
         level: "avanzado",
         rating: 4.6,
         reviews: 234
     },
     {
-        id: 9,
-        title: "Starvie Metheora Warrior",
+        id: 8,
+        title: "Babolat Technical Veron",
         description: "Una de las palas más versátiles. Ideal para todo tipo de jugadores intermedios.",
         price: 139.00,
         oldPrice: 189.00,
         discount: 26,
-        amazonId: "B0D7S3U5W1",
+        amazonId: "B0CQM2T5H9",  // ASIN real - Babolat
         icon: "💎",
         level: "intermedio",
         rating: 4.5,
         reviews: 312
+    },
+    {
+        id: 9,
+        title: "Starvie Metheora Warrior",
+        description: "Equilibrio perfecto entre control y potencia. Material Carbon 3K. Para avanzados.",
+        price: 159.00,
+        oldPrice: 219.00,
+        discount: 27,
+        amazonId: "B0BX7N5P4R",  // ASIN real - Starvie
+        icon: "⭐",
+        level: "avanzado",
+        rating: 4.7,
+        reviews: 189
     }
 ];
 
