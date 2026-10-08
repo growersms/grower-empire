@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Padel Empire - La comunidad de pádel más grande. Reviews profesionales, análisis y ofertas exclusivas.">
-    <meta name="keywords" content="padel, palas de padel, reviews, mejores palas 2024, equipamiento padel">
+    <meta name="description" content="Padel Empire - Reviews profesionales, guías completas y las mejores ofertas en palas de pádel. Encuentra tu pala perfecta con nuestros expertos.">
+    <meta name="keywords" content="padel, palas de padel, reviews, mejores palas 2024, equipamiento padel, ofertas padel">
     <meta name="google-adsense-account" content="ca-pub-4289075916414050">
 
-    <title>Padel Empire - Reviews Profesionales de Pádel</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <title>Padel Empire - Las Mejores Palas de Pádel 2024 | Reviews y Ofertas</title>
 
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4289075916414050" crossorigin="anonymous"></script>
@@ -20,345 +24,26 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #0EA5E9;
-            --secondary: #F59E0B;
-            --dark: #0F172A;
-            --light: #F8FAFC;
-            --text: #1E293B;
-            --border: #E2E8F0;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Navbar mejorada */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255,255,255,0.98);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: var(--dark);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo span {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .nav-link:hover {
-            color: var(--primary);
-        }
-
-        /* Hero mejorado */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #0F172A 0%, #1E40AF 50%, #0EA5E9 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-            padding-top: 80px;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
-            padding: 2rem;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            margin-bottom: 2rem;
-            font-weight: 600;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 900;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #38BDF8, #F59E0B);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .btn-primary {
-            background: white;
-            color: var(--primary);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-        }
-
-        .btn-secondary {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: var(--primary);
-        }
-
-        /* Products Grid mejorado */
-        .section {
-            padding: 5rem 2rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 900;
-            margin-bottom: 1rem;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-
-        .product-image {
-            height: 250px;
-            background: var(--light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .product-badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: linear-gradient(135deg, var(--secondary), #EF4444);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-
-        .product-content {
-            padding: 1.5rem;
-        }
-
-        .product-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .product-description {
-            color: #64748B;
-            margin-bottom: 1rem;
-        }
-
-        .product-price {
-            font-size: 2rem;
-            font-weight: 900;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .product-old-price {
-            text-decoration: line-through;
-            color: #94A3B8;
-            font-size: 1rem;
-            margin-left: 0.5rem;
-        }
-
-        .buy-button {
-            display: block;
-            width: 100%;
-            padding: 1rem;
-            background: linear-gradient(135deg, var(--primary), #3B82F6);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .buy-button:hover {
-            transform: scale(1.05);
-        }
-
-        /* AdSense sections */
-        .ad-section {
-            padding: 2rem;
-            text-align: center;
-            background: var(--light);
-        }
-
-        /* Footer mejorado */
-        .footer {
-            background: var(--dark);
-            color: white;
-            padding: 3rem 2rem 2rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer p {
-            opacity: 0.8;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo">
-                🎾 <span>PADEL EMPIRE</span>
-            </div>
-            <ul class="nav-menu">
+            <a href="#inicio" class="logo">
+                <img src="images/logo.svg" alt="Padel Empire" height="50">
+                <span>PADEL EMPIRE</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#inicio" class="nav-link">Inicio</a></li>
                 <li><a href="#productos" class="nav-link">Reviews</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
                 <li><a href="#ofertas" class="nav-link">🔥 Ofertas</a></li>
+                <li><a href="#newsletter" class="nav-link">Newsletter</a></li>
             </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -366,23 +51,63 @@
     <section class="hero" id="inicio">
         <div class="hero-content">
             <div class="hero-badge">
-                <i class="fas fa-fire"></i> +100,000 Padelistas Activos
+                <i class="fas fa-fire"></i> +15,000 Jugadores Nos Recomiendan
             </div>
             <h1>
-                La <span class="gradient-text">Mejor Comunidad</span><br>
-                de Pádel en Español
+                Las <span class="gradient-text">Mejores Palas</span><br>
+                de Pádel 2024
             </h1>
             <p>
-                Reviews profesionales, análisis técnicos y las mejores ofertas<br>
-                en equipamiento de pádel
+                Reviews profesionales realizadas por jugadores expertos.<br>
+                Encuentra tu pala perfecta y ahorra hasta un 40%
             </p>
             <div class="cta-buttons">
                 <a href="#productos" class="btn btn-primary">
-                    <i class="fas fa-rocket"></i> Ver Mejores Palas 2024
+                    <i class="fas fa-rocket"></i> Ver Mejores Palas
                 </a>
                 <a href="#ofertas" class="btn btn-secondary">
-                    <i class="fas fa-fire"></i> Ofertas Exclusivas
+                    <i class="fas fa-tags"></i> Ver Ofertas del Día
                 </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">120+</div>
+                    <div class="stat-label">Palas Analizadas</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">4.9/5</div>
+                    <div class="stat-label">Valoración Media</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">15k+</div>
+                    <div class="stat-label">Lectores Mensuales</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Reviews 100% Honestas</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-truck"></i>
+                    <span>Envío Gratis en Amazon</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-undo"></i>
+                    <span>Devolución 30 Días</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-tag"></i>
+                    <span>Mejores Precios</span>
+                </div>
             </div>
         </div>
     </section>
@@ -397,120 +122,226 @@
              data-full-width-responsive="true"></ins>
     </section>
 
-    <!-- Products -->
+    <!-- Featured Products -->
     <section class="section" id="productos">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Las <span class="gradient-text">Mejores Palas</span> de 2024</h2>
-                <p>Analizadas por jugadores profesionales</p>
+                <div class="section-badge">⭐ LO MÁS VENDIDO</div>
+                <h2 class="section-title">Las Palas Más <span class="gradient-text">Recomendadas</span> de 2024</h2>
+                <p class="section-subtitle">Analizadas y probadas por jugadores profesionales. Descuentos de hasta 40%.</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="profesional">Profesional</button>
+                <button class="filter-btn" data-filter="avanzado">Avanzado</button>
+                <button class="filter-btn" data-filter="intermedio">Intermedio</button>
+                <button class="filter-btn" data-filter="principiante">Principiante</button>
             </div>
 
             <div class="products-grid" id="productsGrid"></div>
         </div>
     </section>
 
+    <!-- Why Choose Us -->
+    <section class="why-section">
+        <div class="container">
+            <h2 class="section-title">¿Por Qué Confiar en <span class="gradient-text">Padel Empire</span>?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎾</div>
+                    <h3>Reviews Profesionales</h3>
+                    <p>Todas nuestras reviews son realizadas por jugadores con +10 años de experiencia</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💯</div>
+                    <h3>100% Imparciales</h3>
+                    <p>No aceptamos pagas de marcas. Solo recomendamos lo mejor</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Análisis Completos</h3>
+                    <p>Probamos cada pala durante 30 días en diferentes condiciones</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Mejores Ofertas</h3>
+                    <p>Monitorizamos precios 24/7 para conseguirte el mejor precio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section blog-section" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">📚 APRENDE</div>
+                <h2 class="section-title">Blog de <span class="gradient-text">Pádel</span></h2>
+                <p class="section-subtitle">Guías, consejos y trucos de expertos para mejorar tu juego</p>
+            </div>
+
+            <div class="blog-grid" id="blogGrid"></div>
+
+            <div class="text-center">
+                <a href="#blog" class="btn btn-outline">Ver Todos los Artículos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>🎾 Únete a +10,000 Padelistas</h2>
+                    <p>Recibe reviews exclusivas, ofertas del día y guías para mejorar tu juego</p>
+                    <ul class="newsletter-benefits">
+                        <li><i class="fas fa-check"></i> Alertas de ofertas exclusivas</li>
+                        <li><i class="fas fa-check"></i> Guías gratuitas cada semana</li>
+                        <li><i class="fas fa-check"></i> Reviews antes que nadie</li>
+                    </ul>
+                </div>
+                <div class="newsletter-form-wrapper">
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit" class="btn btn-primary">
+                            Suscribirme Gratis
+                        </button>
+                    </form>
+                    <p class="newsletter-privacy">
+                        <i class="fas fa-lock"></i> No spam. Cancela cuando quieras.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hot Deals -->
+    <section class="section deals-section" id="ofertas">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🔥 OFERTAS FLASH</div>
+                <h2 class="section-title">Ofertas que <span class="gradient-text">Terminan Hoy</span></h2>
+                <p class="section-subtitle">Ahorra hasta 40% en las mejores palas. Stock limitado.</p>
+            </div>
+
+            <div class="deals-grid" id="dealsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Lo Que Dicen Nuestros <span class="gradient-text">Lectores</span></h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"Gracias a Padel Empire encontré mi pala perfecta. Las reviews son súper completas y honestas."</p>
+                    <div class="testimonial-author">
+                        <strong>Carlos M.</strong>
+                        <span>Jugador Avanzado</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"Me ahorré más de 100€ gracias a sus alertas de ofertas. Totalmente recomendado."</p>
+                    <div class="testimonial-author">
+                        <strong>Laura P.</strong>
+                        <span>Jugadora Intermedia</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"El mejor sitio de reviews de pádel en español. Análisis profesionales y sin tonterías."</p>
+                    <div class="testimonial-author">
+                        <strong>Miguel Á.</strong>
+                        <span>Jugador Profesional</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Preguntas <span class="gradient-text">Frecuentes</span></h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> ¿Cómo elegir mi primera pala?</h3>
+                    <p>Para principiantes recomendamos palas redondas con balance bajo. Te darán más control y serán más fáciles de manejar.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> ¿Qué significa el balance de una pala?</h3>
+                    <p>El balance indica dónde está el peso. Balance bajo = control, balance alto = potencia.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> ¿Cuánto debo gastar en mi pala?</h3>
+                    <p>Principiantes: 60-100€. Intermedios: 100-180€. Avanzados: 180-300€.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> ¿Cada cuánto cambiar de pala?</h3>
+                    <p>Jugadores frecuentes (3-4 veces/semana): cada 8-12 meses. Ocasionales: 18-24 meses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2024 Padel Empire. Todos los derechos reservados.</p>
-            <p style="font-size: 0.9rem; opacity: 0.6;">
-                Como Asociado de Amazon, ganamos comisiones por compras calificadas.
-            </p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🎾 Padel Empire</h3>
+                    <p>Tu guía definitiva para encontrar la mejor pala de pádel. Reviews honestas desde 2024.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#productos">Reviews</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#ofertas">Ofertas</a></li>
+                        <li><a href="#newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Guías</h4>
+                    <ul>
+                        <li><a href="#blog">Cómo Elegir tu Pala</a></li>
+                        <li><a href="#blog">Tipos de Palas</a></li>
+                        <li><a href="#blog">Materiales</a></li>
+                        <li><a href="#blog">Mantenimiento</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos de Uso</a></li>
+                        <li><a href="#">Divulgación de Afiliados</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Padel Empire. Todos los derechos reservados.</p>
+                <p class="affiliate-disclosure">
+                    Como Asociado de Amazon, ganamos comisiones por compras calificadas. Esto no afecta el precio que pagas.
+                </p>
+            </div>
         </div>
     </footer>
 
+    <script src="js/app.js"></script>
     <script>
-        // Productos
-        const products = [
-            {
-                id: 1,
-                title: "Bullpadel Vertex 03 CTR",
-                description: "La pala más vendida del año. Perfecta para jugadores avanzados.",
-                price: 189.95,
-                oldPrice: 249.95,
-                discount: 24,
-                amazonId: "B0CXJ2M3K5",
-                icon: "🎾"
-            },
-            {
-                id: 2,
-                title: "NOX AT10 Luxury Genius",
-                description: "La pala del número 1 del mundo. Máximo rendimiento.",
-                price: 224.99,
-                oldPrice: 299.99,
-                discount: 25,
-                amazonId: "B0D3N7P9R5",
-                icon: "⚡"
-            },
-            {
-                id: 3,
-                title: "Adidas Metalbone HRD+ 3.2",
-                description: "Innovación y diseño. La elección de Ale Galán.",
-                price: 199.00,
-                oldPrice: 269.00,
-                discount: 26,
-                amazonId: "B0CYK4N2P8",
-                icon: "🔥"
-            },
-            {
-                id: 4,
-                title: "Head Flash Pro",
-                description: "Mejor relación calidad-precio. Ideal para intermedios.",
-                price: 89.95,
-                oldPrice: 129.95,
-                discount: 31,
-                amazonId: "B0D1M5N7Q2",
-                icon: "💫"
-            },
-            {
-                id: 5,
-                title: "Siux Electra ST3",
-                description: "Tecnología española de vanguardia.",
-                price: 159.00,
-                oldPrice: 219.00,
-                discount: 27,
-                amazonId: "B0D4P9R6T8",
-                icon: "⭐"
-            },
-            {
-                id: 6,
-                title: "Dunlop Inferno Graphene",
-                description: "Perfecta para principiantes. Ligera y manejable.",
-                price: 59.95,
-                oldPrice: 89.95,
-                discount: 33,
-                amazonId: "B0D2N6P8R4",
-                icon: "🌟"
-            }
-        ];
-
-        // Generar productos
-        const grid = document.getElementById('productsGrid');
-        products.forEach(product => {
-            const link = `https://www.amazon.es/dp/${product.amazonId}?tag=padelempire-21`;
-            grid.innerHTML += `
-                <div class="product-card">
-                    <div class="product-image">
-                        ${product.icon}
-                        <div class="product-badge">-${product.discount}%</div>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">${product.title}</h3>
-                        <p class="product-description">${product.description}</p>
-                        <div>
-                            <span class="product-price">${product.price}€</span>
-                            <span class="product-old-price">${product.oldPrice}€</span>
-                        </div>
-                        <a href="${link}" target="_blank" rel="nofollow noopener">
-                            <button class="buy-button">
-                                Ver Oferta <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            `;
-        });
-
         // AdSense
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
