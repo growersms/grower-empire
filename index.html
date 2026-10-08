@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Padel Empire - La comunidad de pádel más grande. Reviews profesionales, análisis y ofertas exclusivas.">
+    <meta name="keywords" content="padel, palas de padel, reviews, mejores palas 2024, equipamiento padel">
+    <meta name="google-adsense-account" content="ca-pub-4289075916414050">
+
+    <title>Padel Empire - Reviews Profesionales de Pádel</title>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4289075916414050" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0EA5E9;
+            --secondary: #F59E0B;
+            --dark: #0F172A;
+            --light: #F8FAFC;
+            --text: #1E293B;
+            --border: #E2E8F0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar mejorada */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Hero mejorado */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0F172A 0%, #1E40AF 50%, #0EA5E9 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            padding: 2rem;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #38BDF8, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* Products Grid mejorado */
+        .section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .product-image {
+            height: 250px;
+            background: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(135deg, var(--secondary), #EF4444);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .product-content {
+            padding: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            color: #64748B;
+            margin-bottom: 1rem;
+        }
+
+        .product-price {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .product-old-price {
+            text-decoration: line-through;
+            color: #94A3B8;
+            font-size: 1rem;
+            margin-left: 0.5rem;
+        }
+
+        .buy-button {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--primary), #3B82F6);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .buy-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* AdSense sections */
+        .ad-section {
+            padding: 2rem;
+            text-align: center;
+            background: var(--light);
+        }
+
+        /* Footer mejorado */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                🎾 <span>PADEL EMPIRE</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#productos" class="nav-link">Reviews</a></li>
+                <li><a href="#ofertas" class="nav-link">🔥 Ofertas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-fire"></i> +100,000 Padelistas Activos
+            </div>
+            <h1>
+                La <span class="gradient-text">Mejor Comunidad</span><br>
+                de Pádel en Español
+            </h1>
+            <p>
+                Reviews profesionales, análisis técnicos y las mejores ofertas<br>
+                en equipamiento de pádel
+            </p>
+            <div class="cta-buttons">
+                <a href="#productos" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> Ver Mejores Palas 2024
+                </a>
+                <a href="#ofertas" class="btn btn-secondary">
+                    <i class="fas fa-fire"></i> Ofertas Exclusivas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AdSense Banner -->
+    <section class="ad-section">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-4289075916414050"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </section>
+
+    <!-- Products -->
+    <section class="section" id="productos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Las <span class="gradient-text">Mejores Palas</span> de 2024</h2>
+                <p>Analizadas por jugadores profesionales</p>
+            </div>
+
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Padel Empire. Todos los derechos reservados.</p>
+            <p style="font-size: 0.9rem; opacity: 0.6;">
+                Como Asociado de Amazon, ganamos comisiones por compras calificadas.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Productos
+        const products = [
+            {
+                id: 1,
+                title: "Bullpadel Vertex 03 CTR",
+                description: "La pala más vendida del año. Perfecta para jugadores avanzados.",
+                price: 189.95,
+                oldPrice: 249.95,
+                discount: 24,
+                amazonId: "B0CXJ2M3K5",
+                icon: "🎾"
+            },
+            {
+                id: 2,
+                title: "NOX AT10 Luxury Genius",
+                description: "La pala del número 1 del mundo. Máximo rendimiento.",
+                price: 224.99,
+                oldPrice: 299.99,
+                discount: 25,
+                amazonId: "B0D3N7P9R5",
+                icon: "⚡"
+            },
+            {
+                id: 3,
+                title: "Adidas Metalbone HRD+ 3.2",
+                description: "Innovación y diseño. La elección de Ale Galán.",
+                price: 199.00,
+                oldPrice: 269.00,
+                discount: 26,
+                amazonId: "B0CYK4N2P8",
+                icon: "🔥"
+            },
+            {
+                id: 4,
+                title: "Head Flash Pro",
+                description: "Mejor relación calidad-precio. Ideal para intermedios.",
+                price: 89.95,
+                oldPrice: 129.95,
+                discount: 31,
+                amazonId: "B0D1M5N7Q2",
+                icon: "💫"
+            },
+            {
+                id: 5,
+                title: "Siux Electra ST3",
+                description: "Tecnología española de vanguardia.",
+                price: 159.00,
+                oldPrice: 219.00,
+                discount: 27,
+                amazonId: "B0D4P9R6T8",
+                icon: "⭐"
+            },
+            {
+                id: 6,
+                title: "Dunlop Inferno Graphene",
+                description: "Perfecta para principiantes. Ligera y manejable.",
+                price: 59.95,
+                oldPrice: 89.95,
+                discount: 33,
+                amazonId: "B0D2N6P8R4",
+                icon: "🌟"
+            }
+        ];
+
+        // Generar productos
+        const grid = document.getElementById('productsGrid');
+        products.forEach(product => {
+            const link = `https://www.amazon.es/dp/${product.amazonId}?tag=padelempire-21`;
+            grid.innerHTML += `
+                <div class="product-card">
+                    <div class="product-image">
+                        ${product.icon}
+                        <div class="product-badge">-${product.discount}%</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">${product.title}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div>
+                            <span class="product-price">${product.price}€</span>
+                            <span class="product-old-price">${product.oldPrice}€</span>
+                        </div>
+                        <a href="${link}" target="_blank" rel="nofollow noopener">
+                            <button class="buy-button">
+                                Ver Oferta <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            `;
+        });
+
+        // AdSense
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>
