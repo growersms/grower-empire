@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "basic-ftp": "^6.2.2"
+    "basic-ftp": "^6.2.2",
+    "sharp": "^0.35.5"
   }
 }
